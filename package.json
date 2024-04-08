@@ -1,0 +1,36 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "this is an express startup application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nest start --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yayasoles/express.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "nesjs"
+  ],
+  "author": "Yaregal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yayasoles/express/issues",
+    "email": "yayasoles@gmail.com"
+  },
+  "files": [
+    "*"
+  ],
+  "homepage": "https://github.com/yayasoles/express#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.5",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  }
+}
