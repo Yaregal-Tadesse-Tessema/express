@@ -7,11 +7,7 @@ const port = 9000;
 const app = express();
 
 app.use(express.json());
-
-// Get connection manager
 const connectionManager = getConnectionManager();
-
-// Check if connection with the given name already exists, if not, create a new connection
 const connection = connectionManager.has("default")
   ? connectionManager.get("default")
   : connectionManager.create({
@@ -23,10 +19,9 @@ const connection = connectionManager.has("default")
       database: "test",
       entities: [__dirname + "/entities/*.js"],
       synchronize: true,
-      name: "default", // Set the connection name
+      name: "default",
     });
 
-// Initialize the connection
 connection
   .initialize()
   .then(() => {
@@ -39,7 +34,6 @@ connection
     console.error("Error connecting to the database:", error);
     process.exit(1);
   });
-
 // Routes
 app.use("/", queryRouter);
 app.use("/", commandRouter);
