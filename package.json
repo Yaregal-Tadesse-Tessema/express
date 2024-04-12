@@ -2,10 +2,13 @@
   "name": "express",
   "version": "1.0.0",
   "description": "this is an express startup application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nest start --watch"
+    "start:dev": "nest start --watch",
+    "start": "node server.js",
+    "dev": "nodemon -L server.js",
+    "lint": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -14,7 +17,7 @@
   "keywords": [
     "express",
     "nodejs",
-    "nesjs"
+    "nestjs"
   ],
   "author": "Yaregal",
   "license": "ISC",
@@ -27,8 +30,10 @@
   ],
   "homepage": "https://github.com/yayasoles/express#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mysql": "^2.18.1",
+    "nodemon": "^3.1.0",
     "pg": "^8.11.5",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20"

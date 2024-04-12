@@ -1,0 +1,15 @@
+###
+GET http://localhost:13000/users
+
+###
+POST http://localhost:13000/user
+Content-Type: application/json
+
+{
+    "firstName":"Feven2",
+    "middleName":"Essayas2",
+    "lastName":"Ayana2",
+    "email":"feneessayas42@gmail.com"
+}
+
+###

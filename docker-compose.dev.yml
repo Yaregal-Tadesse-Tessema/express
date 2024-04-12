@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    volumes:
+      - ./:/usr/src/app:ro
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV= developemnt
+      - DB_NAME="test1"
+      - DB_TYPE= "postgres"
+      - DB_PASSWORD= "yaya@1984"
+      - DB_USER= "postgres"
+      - DB_PORT= "5432"
+      - DB= "db"
+    depends_on: -db
+    command: npm run dev

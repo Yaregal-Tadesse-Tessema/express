@@ -1,0 +1,19 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: "yaya@1984"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "test1"
+  app:
+    build: .
+    ports:
+      - "13000:3000"
+    volumes:
+      - ./:/usr/src/app:ro
+      - /usr/src/app/node_modules
+volumes:
+  pgdata:

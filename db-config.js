@@ -1,7 +1,7 @@
 const { DataSource } = require("typeorm");
 const myDataSource = new DataSource({
   type: "postgres",
-  host: "localhost",
+  host: "db",
   port: 5432,
   username: "postgres",
   password: "yaya@1984",
